@@ -1,0 +1,97 @@
+{
+  "title": "Outdoor filming weather planner",
+  "summary": {
+    "Mode": "Recorded forecast — not current",
+    "Forecast timezone": "America/New_York",
+    "Days fitting preferences": 6,
+    "Snapshot retrieved (UTC)": "2026-09-04T03:29:14.193459+00:00"
+  },
+  "columns": [
+    "Date",
+    "High (C)",
+    "Max rain probability (%)",
+    "Max wind (km/h)",
+    "Filming preference"
+  ],
+  "rows": [
+    {
+      "Date": "2026-09-03",
+      "High (C)": 30.0,
+      "Max rain probability (%)": 80,
+      "Max wind (km/h)": 18.1,
+      "Filming preference": "Backup plan"
+    },
+    {
+      "Date": "2026-09-04",
+      "High (C)": 29.5,
+      "Max rain probability (%)": 30,
+      "Max wind (km/h)": 23.2,
+      "Filming preference": "Fits"
+    },
+    {
+      "Date": "2026-09-05",
+      "High (C)": 25.9,
+      "Max rain probability (%)": 22,
+      "Max wind (km/h)": 18.7,
+      "Filming preference": "Fits"
+    },
+    {
+      "Date": "2026-09-06",
+      "High (C)": 23.6,
+      "Max rain probability (%)": 22,
+      "Max wind (km/h)": 20.0,
+      "Filming preference": "Fits"
+    },
+    {
+      "Date": "2026-09-07",
+      "High (C)": 26.6,
+      "Max rain probability (%)": 2,
+      "Max wind (km/h)": 14.0,
+      "Filming preference": "Fits"
+    },
+    {
+      "Date": "2026-09-08",
+      "High (C)": 28.0,
+      "Max rain probability (%)": 1,
+      "Max wind (km/h)": 15.2,
+      "Filming preference": "Fits"
+    },
+    {
+      "Date": "2026-09-09",
+      "High (C)": 23.1,
+      "Max rain probability (%)": 30,
+      "Max wind (km/h)": 13.7,
+      "Filming preference": "Fits"
+    }
+  ],
+  "notes": [
+    "Preference: daily max rain probability <= 30% and max wind <= 25 km/h. These are project defaults, not safety thresholds.",
+    "Weather data by Open-Meteo.com, CC BY 4.0. Sample is an unchanged recorded API response; see provenance.json for retrieval time and coordinates.",
+    "Daily maxima do not identify a dry time slot. Forecasts change; this is not a warning or safety service. Use --live for a fresh forecast.",
+    "Open-Meteo's free hosted API is for non-commercial use; check the linked terms before commercial deployment."
+  ],
+  "sources": [
+    {
+      "title": "Open-Meteo — Forecast API documentation",
+      "url": "https://open-meteo.com/en/docs",
+      "use": "Daily variables, coordinates, timezone and units. Weather data attribution: Open-Meteo, CC BY 4.0."
+    },
+    {
+      "title": "Open-Meteo — Terms",
+      "url": "https://open-meteo.com/en/terms",
+      "use": "Hosted free API usage limits and non-commercial-use terms."
+    },
+    {
+      "title": "Recorded data endpoint",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.006&daily=temperature_2m_max%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&forecast_days=7&temperature_unit=celsius&wind_speed_unit=kmh"
+    }
+  ],
+  "data_provenance": {
+    "provider": "Open-Meteo",
+    "source_url": "https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.006&daily=temperature_2m_max%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&forecast_days=7&temperature_unit=celsius&wind_speed_unit=kmh",
+    "retrieved_at_utc": "2026-09-04T03:29:14.193459+00:00",
+    "sha256": "84fe3af88308a5b67ae74fad384389755c61710d6701ef1cbc9ed245f6a96b46",
+    "transformation": "JSON formatting only; field values unchanged",
+    "attribution": "Weather data by Open-Meteo.com, CC BY 4.0; https://open-meteo.com/en/terms"
+  }
+}

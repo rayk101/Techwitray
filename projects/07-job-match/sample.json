@@ -1,0 +1,5 @@
+{
+  "resume": "Built a Python script that cleans 500 synthetic order records.\nUsed SQL to summarize sales by product.\nUsed Git and wrote unit tests for CSV validation.\nCreated an Excel report for a student club.",
+  "job_description": "Fictional junior operations analyst role. Use Python, SQL, Excel and Git to maintain reporting pipelines. Build dashboards in Power BI. Communicate analysis through documentation and unit tests.",
+  "skills": ["Python", "SQL", "Excel", "Git", "Power BI", "documentation", "unit tests", "React"]
+}

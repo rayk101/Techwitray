@@ -1,0 +1,13 @@
+id,date,description,category,amount
+T01,2026-08-01,Salary,Income,3200.00
+T02,2026-08-02,Rent,Housing,-1100.00
+T03,2026-08-03,Weekly groceries,Food,-84.32
+T04,2026-08-07,Transit pass,Transport,-65.00
+T05,2026-08-10,Editing software,Software,-29.00
+T06,2026-08-12,Freelance design,Income,450.00
+T07,2026-08-15,Groceries,Food,-76.18
+T08,2026-08-19,Grocery refund,Food,12.50
+T09,2026-08-20,Savings transfer,Transfer,-300.00
+T10,2026-08-21,Internet,Utilities,-59.99
+T11,2026-08-25,Video subscription,Entertainment,-15.99
+T12,2026-09-01,Next month salary,Income,3200.00

@@ -1,0 +1,77 @@
+{
+  "title": "Support ticket triage",
+  "summary": {
+    "Tickets": 6,
+    "P1 suggestions": 2
+  },
+  "columns": [
+    "Ticket",
+    "Subject",
+    "Queue",
+    "Priority",
+    "Evidence",
+    "Review flag"
+  ],
+  "rows": [
+    {
+      "Ticket": "SUP-101",
+      "Subject": "Service down",
+      "Queue": "Reliability",
+      "Priority": "P1",
+      "Evidence": "Reliability: all users, service down",
+      "Review flag": "Routine review"
+    },
+    {
+      "Ticket": "SUP-105",
+      "Subject": "Possible account takeover",
+      "Queue": "Security",
+      "Priority": "P1",
+      "Evidence": "Security: unauthorized, account takeover; Billing: invoice; Account: login",
+      "Review flag": "Multiple/no matches"
+    },
+    {
+      "Ticket": "SUP-102",
+      "Subject": "Duplicate payment",
+      "Queue": "Billing",
+      "Priority": "P2",
+      "Evidence": "Billing: charged, payment",
+      "Review flag": "Routine review"
+    },
+    {
+      "Ticket": "SUP-103",
+      "Subject": "Login problem",
+      "Queue": "Account",
+      "Priority": "P2",
+      "Evidence": "Account: login, password",
+      "Review flag": "Routine review"
+    },
+    {
+      "Ticket": "SUP-104",
+      "Subject": "Export feature",
+      "Queue": "Product",
+      "Priority": "P3",
+      "Evidence": "Product: feature, export, dashboard",
+      "Review flag": "Routine review"
+    },
+    {
+      "Ticket": "SUP-106",
+      "Subject": "Delivery question",
+      "Queue": "General",
+      "Priority": "P3",
+      "Evidence": "No rule matched",
+      "Review flag": "Multiple/no matches"
+    }
+  ],
+  "notes": [
+    "Fictional tickets. Keywords and P1/P2/P3 rules are local teaching examples, not Atlassian severity definitions.",
+    "All classifications require human review. Keyword rules miss context, negation and unfamiliar wording.",
+    "Security and reliability rules take precedence over billing, account and product. No tickets are modified or messages sent."
+  ],
+  "sources": [
+    {
+      "title": "Atlassian — Understanding incident severity levels",
+      "url": "https://www.atlassian.com/incident-management/kpis/severity-levels",
+      "use": "Real-world rationale for prioritization. The project's P1/P2/P3 keywords are original teaching rules, not Atlassian's severity taxonomy."
+    }
+  ]
+}

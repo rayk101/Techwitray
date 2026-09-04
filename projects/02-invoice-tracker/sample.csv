@@ -1,0 +1,6 @@
+invoice_id,client,due_date,amount,paid
+INV-101,Maple Studio,2026-06-01,1200.00,200.00
+INV-102,Harbor Coffee,2026-08-15,650.00,0.00
+INV-103,North Design,2026-09-01,900.00,300.00
+INV-104,Juniper Goods,2026-09-10,400.00,0.00
+INV-105,Cedar Works,2026-08-10,500.00,500.00

@@ -1,0 +1,8 @@
+{
+  "provider": "Open Library",
+  "source_url": "https://openlibrary.org/search.json?q=python+programming&limit=5&fields=key%2Ctitle%2Cauthor_name%2Cfirst_publish_year%2Cedition_count",
+  "retrieved_at_utc": "2026-09-04T03:29:13.751368+00:00",
+  "sha256": "c01dcb89555ed040b54ce4fbbcdaab77cd193312304be5b3cfb50b0eabdbc55d",
+  "transformation": "JSON formatting only; field values unchanged",
+  "attribution": "Open Library bibliographic metadata; see https://openlibrary.org/developers/licensing"
+}

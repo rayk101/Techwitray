@@ -1,0 +1,7 @@
+ticket_id,subject,body
+SUP-101,Service down,All users are seeing errors at checkout.
+SUP-102,Duplicate payment,I was charged twice for the same order.
+SUP-103,Login problem,My password reset link expired.
+SUP-104,Export feature,Could you add CSV export to the dashboard?
+SUP-105,Possible account takeover,I see an unauthorized login and an invoice I do not recognize.
+SUP-106,Delivery question,When does the next delivery leave your warehouse?

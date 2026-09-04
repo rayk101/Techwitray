@@ -1,0 +1,6 @@
+sku,name,on_hand,on_order,daily_sales,lead_days,safety_stock
+MUG-01,Studio mug,18,0,4,5,8
+TEE-02,Logo tee,45,10,3,7,10
+STK-03,Sticker pack,12,0,6,3,12
+CAP-04,Everyday cap,5,20,1,10,5
+PIN-05,Enamel pin,15,0,0,8,4

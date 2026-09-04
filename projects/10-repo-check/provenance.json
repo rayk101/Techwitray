@@ -1,0 +1,8 @@
+{
+  "provider": "GitHub public repository API",
+  "source_url": "https://api.github.com/repos/psf/requests",
+  "retrieved_at_utc": "2026-09-04T03:29:14.440672+00:00",
+  "sha256": "9e9bcaba97e013e27fea9b851352b50ae5c2fea2362d58deff3afcaf0df5345b",
+  "transformation": "JSON formatting only; field values unchanged",
+  "attribution": "Public repository metadata; upstream code and branding are not relicensed by this project."
+}

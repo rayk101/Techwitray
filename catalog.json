@@ -1,0 +1,124 @@
+[
+  {
+    "id": "expenses", "folder": "01-expense-analyzer", "title": "Expense analyzer", "difficulty": "Easy", "hours": "2–3",
+    "pitch": "Turn a messy bank export into a monthly spending breakdown.",
+    "demo": "python run.py expenses --month 2026-08",
+    "input": "CSV: id,date,description,category,amount. Dates use YYYY-MM-DD. All amounts are USD: debits negative, credits positive. Use Income and Transfer explicitly; use spending categories for purchases and refunds.",
+    "logic": "Validates dates, unique IDs and cents; filters one month; totals income and category spending with Decimal; subtracts refunds and excludes transfers.",
+    "show": "Show Food at $148.00 after a $12.50 refund, then change the CSV and rerun.",
+    "extend": "Add editable merchant-to-category rules and a chart of monthly totals. Keep manual overrides and test refund handling.",
+    "ai_task": "Explain the three largest spending categories from this report. Suggest two questions the user could investigate, without prescribing spending cuts or inventing transactions.",
+    "sources": [{"title": "CFPB — Your Money, Your Goals toolkit", "url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/", "use": "Real-world basis for tracking and categorizing spending; sample transactions and software are original."}]
+  },
+  {
+    "id": "invoices", "folder": "02-invoice-tracker", "title": "Freelancer invoice tracker", "difficulty": "Easy", "hours": "2–4",
+    "pitch": "See which clients have unpaid balances and how late they are.",
+    "demo": "python run.py invoices --as-of 2026-09-04",
+    "input": "CSV: invoice_id,client,due_date,amount,paid. USD only. paid is cumulative payments as of the chosen report date; export the ledger for that date before historical reporting.",
+    "logic": "Subtracts partial payments, excludes paid invoices, sorts oldest overdue balances first and groups by Current, 1–30, 31–60, 61–90 or 90+ days.",
+    "show": "Show INV-101 with a $1,000 balance after a $200 partial payment.",
+    "extend": "Add a separate dated payments table so historical balances can be reconstructed. Then add a reviewed reminder export.",
+    "ai_task": "Draft a short, polite payment reminder for each overdue invoice using its exact ID, balance and due date. Do not invent fees, legal consequences or prior contact. Leave sender and payment-link placeholders. Do not send anything.",
+    "sources": [{"title": "Stripe — Accounts receivable aging report", "url": "https://docs.stripe.com/revenue-recognition/reports/accounts-receivable-aging", "use": "Explains outstanding balances grouped by age. Our simplified 90+ bucket combines Stripe's older ranges; this is not a Stripe integration."}]
+  },
+  {
+    "id": "inventory", "folder": "03-inventory-planner", "title": "Inventory reorder planner", "difficulty": "Medium", "hours": "3–5",
+    "pitch": "Help a small shop spot products that need replenishment.",
+    "demo": "python run.py inventory --review-days 7",
+    "input": "CSV: sku,name,on_hand,on_order,daily_sales,lead_days,safety_stock. Counts and days are nonnegative integers; daily_sales can be fractional. No backorders.",
+    "logic": "Computes ceil(daily_sales × lead_days + safety_stock). At or below that point, suggests enough units to cover lead_days + review_days plus safety stock. On-order units count toward stock position.",
+    "show": "Show Sticker pack: reorder point 30, stock position 12, suggested order 60 units.",
+    "extend": "Calculate average demand from dated sales history and model incoming shipment dates. Add supplier minimum order quantities.",
+    "ai_task": "Write a purchasing review note explaining the three largest suggested orders. Cite SKUs and exact quantities; distinguish demand assumptions from observed stock. Do not place orders or claim the quantities are optimal.",
+    "sources": [{"title": "Shopify — Reorder point formula", "url": "https://www.shopify.com/blog/reorder-point", "use": "Reorder point = demand during lead time + safety stock. Our review-interval order-up-to policy is an explicit project design choice."}]
+  },
+  {
+    "id": "support", "folder": "04-support-triage", "title": "Support ticket triage", "difficulty": "Medium", "hours": "3–5",
+    "pitch": "Route an inbox to the right team with visible evidence and review flags.",
+    "demo": "python run.py support",
+    "input": "CSV: ticket_id,subject,body. IDs must be unique. The bundled tickets are fictional. Rules are editable near the top of app.py.",
+    "logic": "Matches whole keywords, applies Security → Reliability → Billing → Account → Product precedence, and flags multiple/no matches. Every suggestion needs review.",
+    "show": "Show SUP-105 routed to Security with the matching words and multiple-category flag.",
+    "extend": "Build a labeled evaluation set with negation and mixed-intent examples. Compare a Claude classifier with the rules before changing routing behavior.",
+    "ai_task": "Review the suggested queues using the visible subjects and matching evidence. Identify ambiguous tickets and draft one clarifying question each. Do not claim the unseen full ticket is available, guarantee classification accuracy, or send replies.",
+    "sources": [{"title": "Atlassian — Understanding incident severity levels", "url": "https://www.atlassian.com/incident-management/kpis/severity-levels", "use": "Real-world rationale for prioritization. The project's P1/P2/P3 keywords are original teaching rules, not Atlassian's severity taxonomy."}]
+  },
+  {
+    "id": "meetings", "folder": "05-meeting-actions", "title": "Meeting action tracker", "difficulty": "Easy", "hours": "2–3",
+    "pitch": "Turn marked meeting notes into a checklist of owners, dates and overdue tasks.",
+    "demo": "python run.py meetings --as-of 2026-09-04",
+    "input": "Markdown checkbox lines: - [ ] Owner | YYYY-MM-DD or TBD | Task. Use [x] for completed work. Use Unassigned when no owner is known. Other prose is ignored.",
+    "logic": "Extracts only explicit action lines; retains source line numbers; flags overdue and missing-date tasks; reports malformed actions instead of silently treating them as completed.",
+    "show": "Show the Unassigned task with Needs date, beside Maya's overdue copy review.",
+    "extend": "Add an optional Claude transcript-to-action extraction step with source quotations, then require confirmation of owners and deadlines.",
+    "ai_task": "Draft a meeting follow-up listing open actions grouped by owner. Cite source line numbers. Ask for clarification on Unassigned owners and TBD deadlines; never invent dates, commitments or meeting decisions.",
+    "sources": [{"title": "Atlassian — How to take useful meeting notes", "url": "https://www.atlassian.com/blog/teamwork/meeting-notes", "use": "Motivation for recording actionable meeting outcomes. The parser's input syntax and sample meeting are original."}]
+  },
+  {
+    "id": "campaigns", "folder": "06-campaign-links", "title": "Campaign link builder", "difficulty": "Easy", "hours": "1–2",
+    "pitch": "Generate consistent tracking links for reels, newsletters and videos.",
+    "demo": "python run.py campaigns",
+    "input": "CSV: url,source,medium,campaign; optional content. Supply absolute HTTP(S) destination URLs. Example.com is a demo destination.",
+    "logic": "URL-encodes campaign values, normalizes UTM values to lowercase, replaces existing utm_* fields and preserves other parameters and fragments.",
+    "show": "Show the Instagram URL preserving ref=profile and #signup while adding campaign parameters.",
+    "extend": "Add approved source/medium presets and a duplicate-campaign-name checker. Verify attribution on your own analytics-enabled landing page.",
+    "ai_task": "Review the generated campaign names for consistency and suggest two clearly labeled alternative utm_content naming conventions. Do not claim clicks, conversions or analytics setup have been verified.",
+    "sources": [{"title": "Google Analytics — Collect campaign data with custom URLs", "url": "https://support.google.com/analytics/answer/10917952?hl=en", "use": "Defines utm_source, utm_medium, utm_campaign and utm_content and explains case sensitivity. Lowercasing is our consistency policy."}]
+  },
+  {
+    "id": "jobmatch", "folder": "07-job-match", "title": "Resume and job skill comparison", "difficulty": "Medium", "hours": "3–4",
+    "pitch": "Compare a resume with a job posting and show the evidence behind each match.",
+    "demo": "python run.py jobmatch",
+    "input": "JSON with resume string, job_description string and skills list. Put each resume bullet on its own line to make evidence readable. Use truthful, redacted content.",
+    "logic": "Finds selected skill phrases in the posting, then checks exact word-bounded matches in the resume and includes the matching resume line.",
+    "show": "Show Python matched to a real resume line and Power BI missing. Call the percentage keyword coverage.",
+    "extend": "Add reviewed synonym groups and separate required from preferred skills. Evaluate negated phrases before adding semantic matching.",
+    "ai_task": "Suggest clearer wording for at most three supplied resume evidence lines, preserving the actual experience. List missing skills as questions to investigate, not qualifications to add. Do not invent metrics, credentials or hiring outcomes.",
+    "sources": [{"title": "U.S. Department of Labor — Resume Essentials participant guide", "url": "https://www.dol.gov/sites/dolgov/files/VETS/files/ResumeEssentials_PG_Interactive_Feb2026.pdf", "use": "Supports targeted resume review and keyword/gap comparison. This tool's metric is not a validated ATS score."}]
+  },
+  {
+    "id": "books", "folder": "08-book-finder", "title": "Book discovery shortlist", "difficulty": "Medium", "hours": "3–4",
+    "pitch": "Search real book metadata and export a linked reading shortlist.",
+    "demo": "python run.py books",
+    "live": "python run.py books --live --query \"python programming\" --limit 5",
+    "input": "Offline: recorded Open Library JSON snapshot. Live: a query and limit of 1–20. --input accepts another API search response; query is not inferred from that file.",
+    "logic": "Makes one search request with explicit fields, handles missing author/year metadata and returns work-page links. Default mode makes no network calls.",
+    "show": "Show actual titles, authors and clickable Open Library records; run --live with a different subject.",
+    "extend": "Add local caching and a saved reading-list file. Use the API's subject fields before asking Claude to organize books by topic.",
+    "ai_task": "Format these records as a readable shortlist with the supplied links. You have titles and bibliographic metadata, not book contents; do not invent summaries, reviews or recommendations based on unseen text.",
+    "sources": [
+      {"title": "Open Library — Search API", "url": "https://openlibrary.org/dev/docs/api/search", "use": "Endpoint, query fields and bibliographic metadata."},
+      {"title": "Open Library — API usage guidelines", "url": "https://openlibrary.org/developers/api", "use": "Rate limits, identification and low-volume use requirements."}
+    ]
+  },
+  {
+    "id": "weather", "folder": "09-weather-planner", "title": "Outdoor filming weather planner", "difficulty": "Medium", "hours": "3–5",
+    "pitch": "Find forecast days that fit your rain and wind preferences for filming.",
+    "demo": "python run.py weather",
+    "live": "python run.py weather --live --latitude 40.7128 --longitude -74.0060 --max-rain 30 --max-wind 25",
+    "input": "Offline: recorded New York City forecast. Live: latitude/longitude, rain probability threshold (%) and wind threshold (km/h). --input accepts equivalent Open-Meteo JSON in Celsius, km/h and percent.",
+    "logic": "Fetches seven daily forecasts, validates parallel arrays and units, preserves unknown values and marks days fitting both preferences. Does not choose an hourly filming slot.",
+    "show": "Show dated forecast rows, then adjust --max-rain and see the preference labels change.",
+    "extend": "Add hourly daylight filtering and a location search. Include the forecast retrieval time in any calendar draft and review it before scheduling.",
+    "ai_task": "Draft a filming plan using only dates that fit the stated preferences. If none fit, say so. Never describe a day as safe or invent hourly conditions. Clearly distinguish a recorded snapshot from a live forecast.",
+    "sources": [
+      {"title": "Open-Meteo — Forecast API documentation", "url": "https://open-meteo.com/en/docs", "use": "Daily variables, coordinates, timezone and units. Weather data attribution: Open-Meteo, CC BY 4.0."},
+      {"title": "Open-Meteo — Terms", "url": "https://open-meteo.com/en/terms", "use": "Hosted free API usage limits and non-commercial-use terms."}
+    ]
+  },
+  {
+    "id": "repocheck", "folder": "10-repo-check", "title": "Public repository maintenance check", "difficulty": "Medium", "hours": "3–4",
+    "pitch": "Turn public repo metadata into a small, evidence-based maintenance checklist.",
+    "demo": "python run.py repocheck --as-of 2026-09-04",
+    "live": "python run.py repocheck --live --repo rayk101/Techwitray",
+    "input": "Offline: recorded psf/requests metadata. Live: public owner/repository. --input accepts another GitHub repository API JSON response. No GitHub token is required for the public endpoint.",
+    "logic": "Checks description, detected license, homepage, archived flag and push recency. Reports stars and open issues plus PRs as dated metadata, not quality scores.",
+    "show": "Run it on this public repository and point to a specific field you could improve.",
+    "extend": "Fetch README existence and default-branch CI status with separate API calls, then report the exact branch and commit checked.",
+    "ai_task": "Turn Review rows into a short maintenance checklist. Cite each field and avoid implying that stars or metadata prove quality, security, licensing rights or employability.",
+    "sources": [
+      {"title": "GitHub — Repository REST API", "url": "https://docs.github.com/en/rest/repos/repos#get-a-repository", "use": "Public repository endpoint and returned metadata fields."},
+      {"title": "GitHub — REST API rate limits", "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api", "use": "Public unauthenticated request limits; this project makes one request per live run."}
+    ]
+  }
+]
