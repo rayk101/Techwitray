@@ -41,10 +41,10 @@ For weather, display the dates and mode label. If you film a bundled sample, kee
 
 10 practical projects to build with Claude. Easy-to-medium scope, runnable Python code, sample inputs, real API examples and source links. Start with one, change it, test it, and be ready to explain how it works.
 
-Code: https://github.com/rayk101/Techwitray#user-content-start-here
+Code: https://github.com/rayk101/Techwitray/blob/main/README.md
 
 #Techwitray #ClaudeAI #PythonProjects #BuildInPublic #LearnToCode
 
 ## Pinned comment
 
-Repo: https://github.com/rayk101/Techwitray#user-content-start-here — all 10 projects have a README, code, example output, source links and a Claude prompt. The default demos run without an API key.
+Repo: https://github.com/rayk101/Techwitray/blob/main/README.md — all 10 projects have a README, code, example output, source links and a Claude prompt. The default demos run without an API key.
