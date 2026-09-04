@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Freelancer invoice tracker",
+  "title": "Unpaid invoice tracker",
   "summary": {
     "As of": "2026-09-04",
     "Unpaid invoices": 4,

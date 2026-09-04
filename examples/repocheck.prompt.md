@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Public repository maintenance check",
+  "title": "GitHub project checklist",
   "summary": {
     "Repository": "psf/requests",
     "URL": "https://github.com/psf/requests",

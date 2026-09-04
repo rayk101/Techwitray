@@ -1,6 +1,6 @@
-# Public repository maintenance check
+# GitHub project checklist
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Repository:** psf/requests
 - **URL:** https://github.com/psf/requests
@@ -18,6 +18,9 @@
 | Archived | Active flag | False |
 | Push recency | Within 180 days | 2026-09-02T18:15:54Z |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Sample metadata is a real GitHub API response for psf/requests. Counts and timestamps change; see provenance.json.
@@ -30,3 +33,5 @@
 - [GitHub — Repository REST API](https://docs.github.com/en/rest/repos/repos#get-a-repository)
 - [GitHub — REST API rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api)
 - [Recorded data endpoint](https://api.github.com/repos/psf/requests)
+
+</details>

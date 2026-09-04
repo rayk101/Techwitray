@@ -1,6 +1,6 @@
-# Expense analyzer
+# Spending tracker
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Month:** 2026-08
 - **Transactions:** 11
@@ -17,6 +17,9 @@
 | Software | 29.00 |
 | Entertainment | 15.99 |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Sample CSV is fictional. All amounts are USD; negative amounts are debits and positive amounts are credits.
@@ -26,3 +29,5 @@
 ## Sources
 
 - [CFPB — Your Money, Your Goals toolkit](https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/)
+
+</details>

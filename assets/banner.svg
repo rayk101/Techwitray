@@ -6,8 +6,8 @@
   <rect x="54" y="49" width="116" height="29" rx="14" fill="#264337"/>
   <text x="112" y="69" fill="#aaf0bb" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">BUILD LAB</text>
   <text x="54" y="147" fill="#f5f4ed" font-family="Arial,sans-serif" font-size="66" font-weight="700" letter-spacing="-2">Techwitray</text>
-  <text x="56" y="196" fill="#b6c4d5" font-family="Arial,sans-serif" font-size="27">Practical projects to build with Claude.</text>
-  <text x="57" y="247" fill="#b6c4d5" font-family="Arial,sans-serif" font-size="18">Easy to medium. Useful from the first run.</text>
-  <text x="58" y="314" fill="#aaf0bb" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">PYTHON  /  REAL SOURCES  /  RUNNABLE CODE</text>
+  <text x="56" y="196" fill="#b6c4d5" font-family="Arial,sans-serif" font-size="27">Beginner projects to try with Claude.</text>
+  <text x="57" y="247" fill="#b6c4d5" font-family="Arial,sans-serif" font-size="18">Simple steps. Small projects. Learn as you go.</text>
+  <text x="58" y="314" fill="#aaf0bb" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">PICK ONE  /  TRY IT  /  MAKE IT YOURS</text>
   <text x="1000" y="245" fill="#aaf0bb" text-anchor="middle" font-family="Arial,sans-serif" font-size="230" font-weight="700" letter-spacing="-18">10</text>
 </svg>

@@ -19,6 +19,7 @@ def load_project(project):
 
 def execute(project, args):
     data = load_project(project).run(args)
+    data["title"] = project.get("simple_title", data["title"])
     data["sources"] = project["sources"]
     if hasattr(args, "live"):
         if args.live:

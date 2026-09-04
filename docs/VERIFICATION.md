@@ -21,6 +21,8 @@ python run.py demo
 
 The all-project integration test blocks `urllib.request.urlopen` and verifies that every default demo still produces its output. Live checks were separate, explicit requests. Passing a mocked Claude test verifies the HTTP contract used by this client; it does not establish live model access or response quality.
 
-The [GitHub Actions workflow](../.github/workflows/test.yml) repeats tests and demos on Python 3.11 and 3.12 on Ubuntu and Windows. Current CI results are visible from the badge on the root README.
+The [GitHub Actions workflow](../.github/workflows/test.yml) repeats tests and demos on Python 3.11 and 3.12 on Ubuntu and Windows. [See the latest results](https://github.com/rayk101/Techwitray/actions/workflows/test.yml).
+
+Beginner guide update: 36 tests passed locally, including every menu choice and recovery from invalid choices. The Windows launcher was also run successfully. All 192 local documentation links resolved.
 
 The projects intentionally have small scopes: explicit spending categories; single-currency invoice balances; constant inventory demand; heuristic ticket routing; marked meeting actions; UTM generation without analytics setup; literal resume keyword matching; book metadata only; daily forecast preferences; and repository metadata only. These limits are also documented beside each output.

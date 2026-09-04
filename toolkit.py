@@ -106,15 +106,16 @@ def cell(value):
 
 
 def markdown(data):
-    lines = [f"# {cell(data['title'])}", "", "*Techwitray · practical projects to build with Claude*", ""]
+    lines = [f"# {cell(data['title'])}", "", "*Techwitray · example result*", ""]
     lines += [f"- **{cell(key)}:** {cell(value)}" for key, value in data["summary"].items()]
     columns = data["columns"]
     lines += ["", "| " + " | ".join(map(cell, columns)) + " |", "| " + " | ".join("---" for _ in columns) + " |"]
     lines += ["| " + " | ".join(cell(row.get(key, "")) for key in columns) + " |" for row in data["rows"]]
     if not data["rows"]:
         lines += ["", "No matching records."]
-    lines += ["", "## Notes", ""] + [f"- {cell(note)}" for note in data["notes"]]
+    lines += ["", "<details>", "<summary>Extra details and sources</summary>", "", "## Notes", ""] + [f"- {cell(note)}" for note in data["notes"]]
     lines += ["", "## Sources", ""] + [f"- [{cell(source['title'])}]({source['url']})" for source in data.get("sources", [])]
+    lines += ["", "</details>"]
     return "\n".join(lines) + "\n"
 
 

@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Resume and job skill comparison",
+  "title": "Resume checker",
   "summary": {
     "Skills identified in posting": 7,
     "Skills mentioned in resume": 5,

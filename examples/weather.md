@@ -1,6 +1,6 @@
-# Outdoor filming weather planner
+# Filming weather planner
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Mode:** Recorded forecast — not current
 - **Forecast timezone:** America/New_York
@@ -17,6 +17,9 @@
 | 2026-09-08 | 28.0 | 1 | 15.2 | Fits |
 | 2026-09-09 | 23.1 | 30 | 13.7 | Fits |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Preference: daily max rain probability &lt;= 30% and max wind &lt;= 25 km/h. These are project defaults, not safety thresholds.
@@ -29,3 +32,5 @@
 - [Open-Meteo — Forecast API documentation](https://open-meteo.com/en/docs)
 - [Open-Meteo — Terms](https://open-meteo.com/en/terms)
 - [Recorded data endpoint](https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.006&daily=temperature_2m_max%2Cprecipitation_probability_max%2Cwind_speed_10m_max&timezone=auto&forecast_days=7&temperature_unit=celsius&wind_speed_unit=kmh)
+
+</details>

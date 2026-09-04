@@ -1,58 +1,25 @@
-# 08 · Book discovery shortlist
+# Book finder
 
-**Medium · 3–4 hours to rebuild and customize** · [All projects](../../README.md)
+Browse a short list of real books.
 
-Search real book metadata and export a linked reading shortlist.
+**Medium** · [Back to all projects](../../README.md)
 
-[Source code](app.py) · [Sample input](sample.json) · [Example report](../../examples/books.md) · [Claude build prompt](PROMPT.md)
+## 1. See what you'll make
 
-## Run
+[See the example](../../examples/books.md)
 
-From the repository root, with Python 3.11 or newer:
+## 2. Ask Claude for help
 
-```bash
-python run.py books
-```
+[Copy the Claude prompt](PROMPT.md) and paste it into your Claude chat. It asks for one simple step at a time.
 
-Reports are written to output/books.md and .json. The .prompt.md file contains the actual report and a tailored analysis request for Claude. All default demos work offline.
+## 3. Try the ready-made version
 
-Fetch current public data:
+Follow the [setup guide](../../docs/START_HERE.md), open the menu, then type **8** and press Enter. The sample is already included.
 
-```bash
-python run.py books --live --query "python programming" --limit 5
-```
+## Make one small change
 
-The bundled JSON is a recorded snapshot, not current data. [Inspect its provenance](provenance.json).
+Open a book link in the saved report to see its details.
 
-## Use your own input
+The example uses saved public data. See Extra details if you want fresh results.
 
-Offline: recorded Open Library JSON snapshot. Live: a query and limit of 1–20. --input accepts another API search response; query is not inferred from that file.
-
-```bash
-python run.py books --input path/to/your-file.json
-```
-
-## What the code does
-
-Makes one search request with explicit fields, handles missing author/year metadata and returns work-page links. Default mode makes no network calls.
-
-## Reel demo
-
-Show actual titles, authors and clickable Open Library records; run --live with a different subject.
-
-## Claude analysis
-
-Format these records as a readable shortlist with the supplied links. You have titles and bibliographic metadata, not book contents; do not invent summaries, reviews or recommendations based on unseen text.
-
-Copy output/books.prompt.md into Claude, or see the [optional API setup](../../docs/USING_CLAUDE.md). The report is calculated by Python; model text is a separate draft.
-
-## Take it further
-
-Add local caching and a saved reading-list file. Use the API's subject fields before asking Claude to organize books by topic.
-
-## Sources and scope
-
-- [Open Library — Search API](https://openlibrary.org/dev/docs/api/search): Endpoint, query fields and bibliographic metadata.
-- [Open Library — API usage guidelines](https://openlibrary.org/developers/api): Rate limits, identification and low-volume use requirements.
-
-Review the notes in the [example report](../../examples/books.md) for assumptions and limitations.
+[Example file](sample.json) · [Code](app.py) · [Extra details and sources](DETAILS.md)

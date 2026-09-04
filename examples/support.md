@@ -1,6 +1,6 @@
-# Support ticket triage
+# Customer message sorter
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Tickets:** 6
 - **P1 suggestions:** 2
@@ -14,6 +14,9 @@
 | SUP-104 | Export feature | Product | P3 | Product: feature, export, dashboard | Routine review |
 | SUP-106 | Delivery question | General | P3 | No rule matched | Multiple/no matches |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Fictional tickets. Keywords and P1/P2/P3 rules are local teaching examples, not Atlassian severity definitions.
@@ -23,3 +26,5 @@
 ## Sources
 
 - [Atlassian — Understanding incident severity levels](https://www.atlassian.com/incident-management/kpis/severity-levels)
+
+</details>

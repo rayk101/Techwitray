@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Expense analyzer",
+  "title": "Spending tracker",
   "summary": {
     "Month": "2026-08",
     "Transactions": 11,

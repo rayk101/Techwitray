@@ -1,49 +1,23 @@
-# 01 · Expense analyzer
+# Spending tracker
 
-**Easy · 2–3 hours to rebuild and customize** · [All projects](../../README.md)
+See where your money goes.
 
-Turn a messy bank export into a monthly spending breakdown.
+**Easy** · [Back to all projects](../../README.md)
 
-[Source code](app.py) · [Sample input](sample.csv) · [Example report](../../examples/expenses.md) · [Claude build prompt](PROMPT.md)
+## 1. See what you'll make
 
-## Run
+[See the example](../../examples/expenses.md)
 
-From the repository root, with Python 3.11 or newer:
+## 2. Ask Claude for help
 
-```bash
-python run.py expenses --month 2026-08
-```
+[Copy the Claude prompt](PROMPT.md) and paste it into your Claude chat. It asks for one simple step at a time.
 
-Reports are written to output/expenses.md and .json. The .prompt.md file contains the actual report and a tailored analysis request for Claude. All default demos work offline.
+## 3. Try the ready-made version
 
-## Use your own input
+Follow the [setup guide](../../docs/START_HERE.md), open the menu, then type **1** and press Enter. The sample is already included.
 
-CSV: id,date,description,category,amount. Dates use YYYY-MM-DD. All amounts are USD: debits negative, credits positive. Use Income and Transfer explicitly; use spending categories for purchases and refunds.
+## Make one small change
 
-```bash
-python run.py expenses --input path/to/your-file.csv
-```
+Change one expense in sample.csv and run it again.
 
-## What the code does
-
-Validates dates, unique IDs and cents; filters one month; totals income and category spending with Decimal; subtracts refunds and excludes transfers.
-
-## Reel demo
-
-Show Food at $148.00 after a $12.50 refund, then change the CSV and rerun.
-
-## Claude analysis
-
-Explain the three largest spending categories from this report. Suggest two questions the user could investigate, without prescribing spending cuts or inventing transactions.
-
-Copy output/expenses.prompt.md into Claude, or see the [optional API setup](../../docs/USING_CLAUDE.md). The report is calculated by Python; model text is a separate draft.
-
-## Take it further
-
-Add editable merchant-to-category rules and a chart of monthly totals. Keep manual overrides and test refund handling.
-
-## Sources and scope
-
-- [CFPB — Your Money, Your Goals toolkit](https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/): Real-world basis for tracking and categorizing spending; sample transactions and software are original.
-
-Review the notes in the [example report](../../examples/expenses.md) for assumptions and limitations.
+[Example file](sample.csv) · [Code](app.py) · [Extra details and sources](DETAILS.md)

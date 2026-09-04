@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Meeting action tracker",
+  "title": "Meeting to-do list",
   "summary": {
     "As of": "2026-09-04",
     "Actions": 5,

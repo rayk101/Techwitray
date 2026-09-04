@@ -1,6 +1,6 @@
-# Meeting action tracker
+# Meeting to-do list
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **As of:** 2026-09-04
 - **Actions:** 5
@@ -15,6 +15,9 @@
 | 10 | Sam | 2026-09-05 | Prepare two reel thumbnail variants | Open |
 | 8 | Alex | 2026-08-30 | Export the logo assets | Done |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Fictional notes. Parses explicit checkbox lines only; it does not infer actions from arbitrary transcripts.
@@ -23,3 +26,5 @@
 ## Sources
 
 - [Atlassian — How to take useful meeting notes](https://www.atlassian.com/blog/teamwork/meeting-notes)
+
+</details>

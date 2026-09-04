@@ -14,6 +14,7 @@ from unittest.mock import MagicMock, patch
 from urllib.parse import parse_qs, urlsplit
 
 import run
+import start
 import toolkit
 
 CATALOG = toolkit.read_json(toolkit.ROOT / "catalog.json")
@@ -212,6 +213,18 @@ class ProjectTests(unittest.TestCase):
             self.assertTrue(data["sources"])
             self.assertTrue((self.path / (project["id"] + ".prompt.md")).is_file())
             self.assertEqual((self.path / (project["id"] + ".md")).read_text(encoding="utf-8"), toolkit.markdown(data))
+
+    def test_beginner_menu_runs_all_projects_and_recovers_from_bad_choices(self):
+        choices = ["hello", "11", "0"]
+        for number in range(1, 11):
+            choices.extend([str(number), ""])
+        choices.append("q")
+        with patch("builtins.input", side_effect=choices), patch("urllib.request.urlopen", side_effect=AssertionError("Unexpected network request")), contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(start.main(self.path), 0)
+        self.assertIn("Please type a number from 1 to 10", output.getvalue())
+        self.assertEqual(len(list(self.path.glob("*.json"))), 10)
+        for project in CATALOG:
+            self.assertIn(project["simple_title"].upper(), output.getvalue())
 
     def test_cli_invalid_json_returns_readable_error(self):
         path = self.input("not json", "invalid.json")

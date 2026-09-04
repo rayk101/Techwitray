@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Inventory reorder planner",
+  "title": "Restock helper",
   "summary": {
     "Products": 5,
     "Products to reorder": 2,

@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Outdoor filming weather planner",
+  "title": "Filming weather planner",
   "summary": {
     "Mode": "Recorded forecast — not current",
     "Forecast timezone": "America/New_York",

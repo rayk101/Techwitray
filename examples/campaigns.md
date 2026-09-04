@@ -1,6 +1,6 @@
-# Campaign link builder
+# Social media link builder
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Links generated:** 3
 
@@ -9,6 +9,9 @@
 | instagram | organic_social | claude_projects | https://example.com/workshop?ref=profile&amp;utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=claude_projects&amp;utm_content=reel_01#signup |
 | newsletter | email | claude_projects | https://example.com/workshop?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=claude_projects&amp;utm_content=weekly_digest |
 | youtube | organic_video | claude_projects | https://example.com/workshop?offer=starter&amp;utm_source=youtube&amp;utm_medium=organic_video&amp;utm_campaign=claude_projects&amp;utm_content=description |
+
+<details>
+<summary>Extra details and sources</summary>
 
 ## Notes
 
@@ -19,3 +22,5 @@
 ## Sources
 
 - [Google Analytics — Collect campaign data with custom URLs](https://support.google.com/analytics/answer/10917952?hl=en)
+
+</details>

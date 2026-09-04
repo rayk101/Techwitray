@@ -1,49 +1,23 @@
-# 05 · Meeting action tracker
+# Meeting to-do list
 
-**Easy · 2–3 hours to rebuild and customize** · [All projects](../../README.md)
+Keep track of tasks and who owns them.
 
-Turn marked meeting notes into a checklist of owners, dates and overdue tasks.
+**Easy** · [Back to all projects](../../README.md)
 
-[Source code](app.py) · [Sample input](sample.md) · [Example report](../../examples/meetings.md) · [Claude build prompt](PROMPT.md)
+## 1. See what you'll make
 
-## Run
+[See the example](../../examples/meetings.md)
 
-From the repository root, with Python 3.11 or newer:
+## 2. Ask Claude for help
 
-```bash
-python run.py meetings --as-of 2026-09-04
-```
+[Copy the Claude prompt](PROMPT.md) and paste it into your Claude chat. It asks for one simple step at a time.
 
-Reports are written to output/meetings.md and .json. The .prompt.md file contains the actual report and a tailored analysis request for Claude. All default demos work offline.
+## 3. Try the ready-made version
 
-## Use your own input
+Follow the [setup guide](../../docs/START_HERE.md), open the menu, then type **5** and press Enter. The sample is already included.
 
-Markdown checkbox lines: - [ ] Owner | YYYY-MM-DD or TBD | Task. Use [x] for completed work. Use Unassigned when no owner is known. Other prose is ignored.
+## Make one small change
 
-```bash
-python run.py meetings --input path/to/your-file.md
-```
+Change [ ] to [x] in sample.md to mark a task done.
 
-## What the code does
-
-Extracts only explicit action lines; retains source line numbers; flags overdue and missing-date tasks; reports malformed actions instead of silently treating them as completed.
-
-## Reel demo
-
-Show the Unassigned task with Needs date, beside Maya's overdue copy review.
-
-## Claude analysis
-
-Draft a meeting follow-up listing open actions grouped by owner. Cite source line numbers. Ask for clarification on Unassigned owners and TBD deadlines; never invent dates, commitments or meeting decisions.
-
-Copy output/meetings.prompt.md into Claude, or see the [optional API setup](../../docs/USING_CLAUDE.md). The report is calculated by Python; model text is a separate draft.
-
-## Take it further
-
-Add an optional Claude transcript-to-action extraction step with source quotations, then require confirmation of owners and deadlines.
-
-## Sources and scope
-
-- [Atlassian — How to take useful meeting notes](https://www.atlassian.com/blog/teamwork/meeting-notes): Motivation for recording actionable meeting outcomes. The parser's input syntax and sample meeting are original.
-
-Review the notes in the [example report](../../examples/meetings.md) for assumptions and limitations.
+[Example file](sample.md) · [Code](app.py) · [Extra details and sources](DETAILS.md)

@@ -1,6 +1,6 @@
-# Freelancer invoice tracker
+# Unpaid invoice tracker
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **As of:** 2026-09-04
 - **Unpaid invoices:** 4
@@ -14,6 +14,9 @@
 | INV-103 | North Design | 2026-09-01 | 3 | 1-30 | 600.00 |
 | INV-104 | Juniper Goods | 2026-09-10 | 0 | Current | 400.00 |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Fictional single-currency ledger. No reminders are sent.
@@ -23,3 +26,5 @@
 ## Sources
 
 - [Stripe — Accounts receivable aging report](https://docs.stripe.com/revenue-recognition/reports/accounts-receivable-aging)
+
+</details>

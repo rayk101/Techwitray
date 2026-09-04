@@ -1,6 +1,6 @@
-# Inventory reorder planner
+# Restock helper
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Products:** 5
 - **Products to reorder:** 2
@@ -15,6 +15,9 @@
 | PIN-05 | Enamel pin | 15 | 4 | 0 | No demand | OK |
 | TEE-02 | Logo tee | 55 | 31 | 0 | 15.0 | OK |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Fictional shop inventory. Reorder point = daily sales x lead days + safety stock, rounded up.
@@ -24,3 +27,5 @@
 ## Sources
 
 - [Shopify — Reorder point formula](https://www.shopify.com/blog/reorder-point)
+
+</details>

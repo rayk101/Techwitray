@@ -1,6 +1,6 @@
-# Resume and job skill comparison
+# Resume checker
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Skills identified in posting:** 7
 - **Skills mentioned in resume:** 5
@@ -16,6 +16,9 @@
 | documentation | Not found in supplied resume | Missing |
 | unit tests | Used Git and wrote unit tests for CSV validation. | Present |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Fictional resume and job posting. Skill vocabulary is user supplied; exact phrases use word boundaries.
@@ -25,3 +28,5 @@
 ## Sources
 
 - [U.S. Department of Labor — Resume Essentials participant guide](https://www.dol.gov/sites/dolgov/files/VETS/files/ResumeEssentials_PG_Interactive_Feb2026.pdf)
+
+</details>

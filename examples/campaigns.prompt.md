@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Campaign link builder",
+  "title": "Social media link builder",
   "summary": {
     "Links generated": 3
   },

@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Support ticket triage",
+  "title": "Customer message sorter",
   "summary": {
     "Tickets": 6,
     "P1 suggestions": 2

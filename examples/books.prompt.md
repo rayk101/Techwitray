@@ -6,7 +6,7 @@ Use only facts in the report. Cite row IDs, SKUs, titles or supplied source URLs
 
 <report_json>
 {
-  "title": "Book discovery shortlist",
+  "title": "Book finder",
   "summary": {
     "Mode": "Recorded API snapshot",
     "Query": "python programming",

@@ -1,49 +1,25 @@
-# 07 · Resume and job skill comparison
+# Resume checker
 
-**Medium · 3–4 hours to rebuild and customize** · [All projects](../../README.md)
+Spot skills mentioned in a job but missing from a resume.
 
-Compare a resume with a job posting and show the evidence behind each match.
+**Medium** · [Back to all projects](../../README.md)
 
-[Source code](app.py) · [Sample input](sample.json) · [Example report](../../examples/jobmatch.md) · [Claude build prompt](PROMPT.md)
+## 1. See what you'll make
 
-## Run
+[See the example](../../examples/jobmatch.md)
 
-From the repository root, with Python 3.11 or newer:
+## 2. Ask Claude for help
 
-```bash
-python run.py jobmatch
-```
+[Copy the Claude prompt](PROMPT.md) and paste it into your Claude chat. It asks for one simple step at a time.
 
-Reports are written to output/jobmatch.md and .json. The .prompt.md file contains the actual report and a tailored analysis request for Claude. All default demos work offline.
+## 3. Try the ready-made version
 
-## Use your own input
+Follow the [setup guide](../../docs/START_HERE.md), open the menu, then type **7** and press Enter. The sample is already included.
 
-JSON with resume string, job_description string and skills list. Put each resume bullet on its own line to make evidence readable. Use truthful, redacted content.
+## Make one small change
 
-```bash
-python run.py jobmatch --input path/to/your-file.json
-```
+Ask Claude to explain one missing skill before editing the example.
 
-## What the code does
+This checks words in the example resume. It is not a hiring score.
 
-Finds selected skill phrases in the posting, then checks exact word-bounded matches in the resume and includes the matching resume line.
-
-## Reel demo
-
-Show Python matched to a real resume line and Power BI missing. Call the percentage keyword coverage.
-
-## Claude analysis
-
-Suggest clearer wording for at most three supplied resume evidence lines, preserving the actual experience. List missing skills as questions to investigate, not qualifications to add. Do not invent metrics, credentials or hiring outcomes.
-
-Copy output/jobmatch.prompt.md into Claude, or see the [optional API setup](../../docs/USING_CLAUDE.md). The report is calculated by Python; model text is a separate draft.
-
-## Take it further
-
-Add reviewed synonym groups and separate required from preferred skills. Evaluate negated phrases before adding semantic matching.
-
-## Sources and scope
-
-- [U.S. Department of Labor — Resume Essentials participant guide](https://www.dol.gov/sites/dolgov/files/VETS/files/ResumeEssentials_PG_Interactive_Feb2026.pdf): Supports targeted resume review and keyword/gap comparison. This tool's metric is not a validated ATS score.
-
-Review the notes in the [example report](../../examples/jobmatch.md) for assumptions and limitations.
+[Example file](sample.json) · [Code](app.py) · [Extra details and sources](DETAILS.md)

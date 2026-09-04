@@ -1,6 +1,6 @@
-# Book discovery shortlist
+# Book finder
 
-*Techwitray · practical projects to build with Claude*
+*Techwitray · example result*
 
 - **Mode:** Recorded API snapshot
 - **Query:** python programming
@@ -15,6 +15,9 @@
 | Python Programming | Reema Thareja | 2019 | 2 | https://openlibrary.org/works/OL26755050W |
 | Python programming | John M. Zelle | 2003 | 2 | https://openlibrary.org/works/OL6037340W |
 
+<details>
+<summary>Extra details and sources</summary>
+
 ## Notes
 
 - Book metadata comes from Open Library; the sample is a real recorded response with provenance.json.
@@ -26,3 +29,5 @@
 - [Open Library — Search API](https://openlibrary.org/dev/docs/api/search)
 - [Open Library — API usage guidelines](https://openlibrary.org/developers/api)
 - [Recorded data endpoint](https://openlibrary.org/search.json?q=python+programming&limit=5&fields=key%2Ctitle%2Cauthor_name%2Cfirst_publish_year%2Cedition_count)
+
+</details>
